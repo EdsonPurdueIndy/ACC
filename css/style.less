@@ -1,0 +1,149 @@
+@gold: #CFB991;
+@black: #000;
+@bg: #ffffff;
+
+/* PAGE BACKGROUND */
+body {
+  background: @bg;
+}
+
+/* HEADER */
+header {
+  background: @gold;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: @black;
+
+  .nav-link,
+  .navbar-brand {
+    color: @gold;
+    transition: 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: white;
+  }
+}
+
+/* HERO */
+.hero-header {
+  background: linear-gradient(135deg, @gold, #b89f5a);
+  color: white;
+}
+
+/*Carousel*/
+.custom-carousel {
+  .carousel-inner {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .carousel-item {
+    height: 500px;
+  }
+
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    padding: 10px 14px;
+  }
+}
+
+
+
+/* CARDS */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* =========================
+   BUTTONS INSIDE CARDS
+========================= */
+.container .card .btn.btn-outline-primary {
+  background-color: @gold;
+  color: @black;
+  border: 1px solid @gold;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.container .card .btn.btn-outline-primary:hover {
+  background-color: @black;
+  color: @gold;
+  border-color: @black;
+  box-shadow: none;
+}
+
+/* click / active / focus fix */
+.container .card .btn.btn-outline-primary:focus,
+.container .card .btn.btn-outline-primary:active,
+.container .card .btn.btn-outline-primary.active {
+  background-color: @gold;
+  color: @black;
+  border-color: @gold;
+  box-shadow: none;
+}
+
+/* FIX: prevents Bootstrap “stuck hover after click” */
+.container .card .btn.btn-outline-primary:focus-visible {
+  background-color: @gold;
+  color: @black;
+  border-color: @gold;
+  box-shadow: none;
+  outline: none;
+}
+
+/* =========================
+   QUIZ BUTTON (.acc-btn)
+========================= */
+.acc-btn {
+  background-color: @gold;
+  color: @black;
+  border: 1px solid @gold;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.acc-btn:hover {
+  background-color: @black;
+  color: @gold;
+  border-color: @black;
+}
+
+/* click / focus fix */
+.acc-btn:focus,
+.acc-btn:active,
+.acc-btn.active {
+  background-color: @gold;
+  color: @black;
+  border-color: @gold;
+  box-shadow: none;
+}
+
+/* FIX: prevents stuck focus glow */
+.acc-btn:focus-visible {
+  background-color: @gold;
+  color: @black;
+  box-shadow: none;
+  outline: none;
+}
+
+/* FOOTER */
+footer {
+  background: @black;
+  color: @gold;
+}
+
+

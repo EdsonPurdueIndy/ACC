@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACC Course Explorer</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/script.js"></script>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-mortarboard"></i> PURDUE ACC Explorer
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="quiz.html">Quiz</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="help.html">Help</a>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="text-white text-center py-5 hero-header">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Welcome to ACC Explorer</h1>
+    <p class="lead">Discover the right major for your future in technology</p>
+
+    <a href="quiz.html"
+      class="btn btn-primary btn-lg mt-3"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      title="Not sure what to study? Take this quiz to find the right major for you!">
+      Take the Quiz
+    </a>
+  </div>
+</header>
+
+<!-- CAROUSEL -->
+<div class="container mt-4 custom-carousel">
+
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+    <div class="carousel-inner rounded shadow">
+
+      <div class="carousel-item active">
+        <img src="../images/path.jpg" class="d-block w-100 carousel-img">
+        <div class="carousel-caption">
+          <h4>Discover Your Path</h4>
+          <p>Find majors that fit your interests</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="../images/skill.jpeg" class="d-block w-100 carousel-img">
+        <div class="carousel-caption">
+          <h4>Build Real Skills</h4>
+          <p>Hands-on learning in tech fields</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="../images/career.jpg" class="d-block w-100 carousel-img">
+        <div class="carousel-caption">
+          <h4>Start Your Career</h4>
+          <p>Prepare for high-demand jobs</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<div class="container mt-4" id="programs">
+  <h4 class="text-center mb-4">Explore Undergraduate Majors</h4>
+
+  <div class="row g-4">
+    <!-- Animation -->
+    <div class="col-md-4">
+      <div class="card text-center w-100">
+        <img src="../images/animation.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Animation and Visual Effects</h5>
+          <p>Enhance entertainment and film by combining real and virtual environments.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#animationModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CIT -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../images/it.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Computer and Information Technology</h5>
+          <p>Manage systems, databases, and networks.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#citModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Network -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../images/network.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Network Engineering</h5>
+          <p>Design and manage advanced networks.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#networkModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cyber -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../images/cyber.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Cybersecurity</h5>
+          <p>Protect systems and prevent attacks.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cyberModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../images/data.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Data Analytics</h5>
+          <p>Analyze data to solve problems.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#dataModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../images/game.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Game Development</h5>
+          <p>Create interactive games.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#gameModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../images/theme.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Themed Entertainment</h5>
+          <p>Design immersive experiences.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#themeModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- UX -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../images/ux.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>UX Design</h5>
+          <p>Design user experiences.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#uxModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../images/web.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5>Web Programming</h5>
+          <p>Build web applications.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#webModal">
+            Explore this Major
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================ MODALS ================= -->
+
+<!-- Animation -->
+<div class="modal fade" id="animationModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-film me-2"></i>Animation and Visual Effects</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Enhance film and media experiences.<br><br>
+
+        <b>Courses:</b> 3D Animation, VFX, Motion Graphics, Rendering, Compositing
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>3D Animator</li>
+          <li>VFX Artist</li>
+          <li>Motion Graphics Designer</li>
+          <li>Game Animator</li>
+          <li>Film/Media Editor</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CIT -->
+<div class="modal fade" id="citModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-pc-display me-2"></i>Computer and Information Technology</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Systems and network management.<br><br>
+
+        <b>Courses:</b> Databases, Networking, Cloud, Security, Web Systems
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>IT Support Specialist</li>
+          <li>Systems Administrator</li>
+          <li>Cloud Engineer</li>
+          <li>Database Administrator</li>
+          <li>IT Project Manager</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Network -->
+<div class="modal fade" id="networkModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-diagram-3 me-2"></i>Network Engineering</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Design network infrastructure.<br><br>
+
+        <b>Courses:</b> Routing, Linux, Cloud Systems, Security
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>Network Engineer</li>
+          <li>Network Administrator</li>
+          <li>Cloud Network Engineer</li>
+          <li>Infrastructure Engineer</li>
+          <li>Systems Engineer</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Cyber -->
+<div class="modal fade" id="cyberModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-shield-lock me-2"></i>Cybersecurity</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Protect systems from attacks.<br><br>
+
+        <b>Courses:</b> Ethical Hacking, Forensics, Cryptography, Pen Testing
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>Cybersecurity Analyst</li>
+          <li>Ethical Hacker (Pen Tester)</li>
+          <li>Security Engineer</li>
+          <li>Digital Forensics Analyst</li>
+          <li>Security Consultant</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Data -->
+<div class="modal fade" id="dataModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-bar-chart me-2"></i>Data Analytics</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Analyze and visualize data.<br><br>
+
+        <b>Courses:</b> Machine Learning, SQL, Python, Statistics
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>Data Analyst</li>
+          <li>Business Intelligence Analyst</li>
+          <li>Data Scientist</li>
+          <li>Machine Learning Engineer</li>
+          <li>Data Engineer</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Game -->
+<div class="modal fade" id="gameModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-controller me-2"></i>Game Development</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Build interactive games.<br><br>
+
+        <b>Courses:</b> Game Engines, AI, 3D Modeling, Physics
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>Game Developer</li>
+          <li>Game Designer</li>
+          <li>Gameplay Programmer</li>
+          <li>Level Designer</li>
+          <li>Technical Artist</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Theme -->
+<div class="modal fade" id="themeModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-stars me-2"></i>Themed Entertainment</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Design immersive experiences.<br><br>
+
+        <b>Courses:</b> VR/AR, Storytelling, Experience Design
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>Experience Designer</li>
+          <li>Theme Park Designer</li>
+          <li>VR/AR Developer</li>
+          <li>Creative Director</li>
+          <li>Interactive Media Designer</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- UX -->
+<div class="modal fade" id="uxModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-ui-checks-grid me-2"></i>UX Design</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Design user-friendly systems.<br><br>
+
+        <b>Courses:</b> HCI, UI Design, Research, Prototyping
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>UX Designer</li>
+          <li>UI Designer</li>
+          <li>Product Designer</li>
+          <li>User Researcher</li>
+          <li>Interaction Designer</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Web -->
+<div class="modal fade" id="webModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-code-slash me-2"></i>Web Programming</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Build full-stack web apps.<br><br>
+
+        <b>Courses:</b> HTML, CSS, JavaScript, APIs, Databases
+        <br><br>
+
+        <b class="text-primary">Careers:</b>
+        <ul class="mt-2">
+          <li>Front-End Developer</li>
+          <li>Back-End Developer</li>
+          <li>Full-Stack Developer</li>
+          <li>Web Developer</li>
+          <li>Software Engineer</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center mt-5 p-3">
+  Edson Garcia @ Purdue Indianapolis
+</footer>
+
+</body>
+</html>
